@@ -1,41 +1,111 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าแรก - เว็บไซต์ส่วนตัว</title>
+    <title>หน้าแรก - เว็บไซต์ส่วนตัวของวนุตา</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; }
-        nav { background-color: #2c3e50; padding: 15px; text-align: center; }
-        nav a { color: white; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; border-radius: 5px; transition: 0.3s; }
-        nav a:hover { background-color: #34495e; color: #1abc9c; }
-        .container { max-width: 800px; margin: 50px auto; padding: 20px; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 8px; text-align: center; }
-        h1 { color: #2c3e50; }
-        p { color: #7f8c8d; line-height: 1.6; }
-        footer { text-align: center; padding: 20px; color: #7f8c8d; font-size: 0.9em; }
+        /* กำหนดค่าพื้นฐานและสีพื้นหลังแบบไล่เฉด */
+        body { 
+            font-family: 'Kanit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(135deg, #e0f2f1 0%, #bbdefb 100%);
+            min-height: 100vh;
+        }
+
+        /* แถบเมนู (Navbar) แบบทันสมัย */
+        nav { 
+            background: rgba(21, 101, 192, 0.95); /* สีน้ำเงินเข้มโปร่งแสงเล็กน้อย */
+            padding: 15px 0; 
+            text-align: center; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 10px 18px; 
+            margin: 0 5px; 
+            font-weight: 500; 
+            border-radius: 30px; 
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px; /* เว้นระยะไอคอนกับข้อความ */
+        }
+
+        /* เอฟเฟกต์เมื่อเอาเมาส์ไปชี้เมนู */
+        nav a:hover { 
+            background-color: #ffffff; 
+            color: #1565c0; 
+            transform: translateY(-2px);
+        }
+
+        /* ส่วนเนื้อหาหลัก */
+        .container { 
+            max-width: 850px; 
+            margin: 60px auto; 
+            padding: 40px; 
+            background: white; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            border-radius: 20px; 
+            text-align: center; 
+            border-top: 8px solid #1976d2; /* เส้นขอบสีน้ำเงินด้านบน */
+        }
+
+        h1 { 
+            color: #0d47a1; 
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        p { 
+            color: #546e7a; 
+            line-height: 1.8; 
+            font-size: 1.1em;
+        }
+
+        /* ท้ายหน้าเว็บ */
+        footer { 
+            text-align: center; 
+            padding: 30px; 
+            color: #546e7a; 
+            font-size: 0.95em; 
+        }
+
+        /* ปรับแต่งให้รองรับมือถือ */
+        @media (max-width: 600px) {
+            nav a { padding: 8px 12px; font-size: 0.9em; margin: 3px; }
+            .container { margin: 20px; padding: 20px; }
+        }
     </style>
 </head>
 <body>
 
-
     <nav>
-        <a href="index.html">หน้าแรก</a>
-        <a href="about.html">ประวัติส่วนตัว</a>
-        <a href="portfolio.html">ผลงานที่ภาคภูมิใจ</a>
-        <a href="contact.html">ช่องทางการติดต่อ</a>
-        <a href="https://www.banglad.ac.th/" target="_blank">รร.บ้านบางลาด</a>
-        <a href="https://thumariya.blogspot.com/" target="_blank">ครูผู้สอน </a>
-     </nav>
+        <a href="index.html"><i class="fas fa-home"></i> หน้าแรก</a>
+        <a href="about.html"><i class="fas fa-user"></i> ประวัติส่วนตัว</a>
+        <a href="portfolio.html"><i class="fas fa-star"></i> ผลงาน</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> ติดต่อ</a>
+        <a href="https://www.banglad.ac.th/" target="_blank"><i class="fas fa-school"></i> รร.บ้านบางลาด</a>
+        <a href="https://thumariya.blogspot.com/" target="_blank"><i class="fas fa-chalkboard-teacher"></i> ครูผู้สอน</a>
+    </nav>
+
     <div class="container">
-        <h1>ยินดีต้อนรับเข้าสู่เว็บไซต์ส่วนตัวของฉันของวนุตา</h1>
-        <p>นี่คือพื้นที่สำหรับแนะนำตัวเอง รวบรวมผลงานที่ผ่านมา และช่องทางการติดต่อสำหรับผู้ที่สนใจร่วมงานหรือพูดคุยแลกเปลี่ยนครับ</p>
+        <i class="fas fa-laptop-code" style="font-size: 3rem; color: #1976d2; margin-bottom: 20px;"></i>
+        <h1>ยินดีต้อนรับเข้าสู่เว็บไซต์ของ วนุตา</h1>
+        <hr style="width: 50px; border: 2px solid #1976d2; border-radius: 2px; margin-bottom: 25px;">
+        <p>ยินดีต้อนรับสู่พื้นที่ดิจิทัลของฉันครับ นี่คือที่สำหรับรวบรวมเรื่องราว ผลงานที่ภาคภูมิใจ <br>และข้อมูลต่างๆ เกี่ยวกับตัวฉัน หากคุณต้องการรู้จักกันมากขึ้น หรือสนใจร่วมงาน สามารถกดดูที่เมนูได้เลยครับ</p>
     </div>
 
-
     <footer>
-        <p>&copy; 2026 My Personal Website. All rights reserved.</p>
+        <p>&copy; 2026 Vanuta's Website | สร้างสรรค์ด้วยความตั้งใจ</p>
     </footer>
-
 
 </body>
 </html>
